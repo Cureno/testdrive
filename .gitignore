@@ -2,3 +2,4 @@ chromedriver.exe
 db.sqlite3
 superlists/__pycache__/
 *.pyc
+.vscode/
