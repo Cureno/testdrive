@@ -42,7 +42,7 @@ class NewVisitorTest(LiveServerTestCase):
         # 1: Buy peacock feathers" as an item in a to-do list table
         inputbox.send_keys(Keys.ENTER)
         edith_list_url = self.browser.current_url
-        self.assertRegex(edith_list_url, '/list/.+')
+        self.assertRegex(edith_list_url, '/lists/.+')
         self.check_for_row_in_list_table('1: Buy peacock feathers')
 
         # There is still a text box inviting her to add another item. She
@@ -62,7 +62,6 @@ class NewVisitorTest(LiveServerTestCase):
         ## of Edith's is coming through from cookies etc #
         self.browser.quit()
         self.browser = webdriver.Chrome()
-        self.fail('Finish the test!')
 
         # Francis visits the home page. There is no sign of Edith's list
         self.browser.get(self.live_server_url)
@@ -87,3 +86,4 @@ class NewVisitorTest(LiveServerTestCase):
         self.assertIn('Buy milk', page_text)
 
         # Satisfied, they both go back to sleep
+        self.fail('Finish the test!')
