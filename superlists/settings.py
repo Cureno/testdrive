@@ -25,6 +25,7 @@ SECRET_KEY = 'c#y&2a3@86=k7eom=f8xm3du*5^37zk65e#=%qq_jjvap)yemg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Needed when DEBUG = False
 ALLOWED_HOSTS = []
 
 
